@@ -2,7 +2,7 @@
 
 Personal portfolio of a Senior QA Engineer / SDET with 9+ years in US healthcare software — test automation architecture, API & clinical data validation, and QA leadership on regulated medical platforms.
 
-**Live site:** _coming soon_ · **LinkedIn:** [linkedin.com/in/bharatbhusandash](https://www.linkedin.com/in/bharatbhusandash)
+**Live site:** [bharatdash.vercel.app](https://bharatdash.vercel.app) · **LinkedIn:** [linkedin.com/in/bharatbhusandash](https://www.linkedin.com/in/bharatbhusandash)
 
 ## The idea
 
