@@ -16,8 +16,7 @@ export const site = {
   name: "Bharat Bhusan Dash",
   shortName: "Bharat Dash",
   role: "Senior QA Engineer · SDET · Test Automation",
-  // TODO: replace with your real domain after deploying
-  siteUrl: "https://example.com",
+  siteUrl: "https://bharatdash.vercel.app",
   email: "bharatdash8@outlook.com",
   linkedin: "https://www.linkedin.com/in/bharatbhusandash",
   github: "https://github.com/bharatdash",
