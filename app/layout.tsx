@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { site } from "@/lib/data";
 
@@ -51,6 +52,7 @@ export default function RootLayout({
         />
         <div className="backdrop-ambient" aria-hidden="true" />
         {children}
+        <Analytics />
       </body>
     </html>
   );
