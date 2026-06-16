@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Theme tokens ─────────────────────────────────────────────
+   Dark ("midnight scan") is the default. `.light` on <html>
+   switches to the clinical-white theme. RGB triplets so Tailwind
+   alpha modifiers work. */
+:root {
+  --bg: 7 13 21;
+  --surface: 15 23 35;
+  --ink: 230 237 243;
+  --muted: 139 152 169;
+  --accent: 45 212 191;
+  --accent-deep: 13 148 136;
+  --pass: 74 222 128;
+  --warn: 251 191 36;
+  --line: 148 163 184;
+}
+
+html.light {
+  --bg: 246 249 251;
+  --surface: 255 255 255;
+  --ink: 14 26 43;
+  --muted: 88 105 126;
+  --accent: 13 148 136;
+  --accent-deep: 15 118 110;
+  --pass: 22 163 74;
+  --warn: 180 98 5;
+  --line: 100 116 139;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  @apply bg-bg text-ink font-body antialiased;
+}
+
+/* Ambient backdrop: faint diagnostic grid + teal glow */
+.backdrop-ambient {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: radial-gradient(
+      48rem 32rem at 85% -10%,
+      rgb(var(--accent) / 0.09),
+      transparent 60%
+    ),
+    radial-gradient(
+      40rem 28rem at -10% 100%,
+      rgb(var(--accent-deep) / 0.07),
+      transparent 60%
+    ),
+    linear-gradient(rgb(var(--line) / 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(var(--line) / 0.045) 1px, transparent 1px);
+  background-size:
+    auto,
+    auto,
+    44px 44px,
+    44px 44px;
+}
+
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+/* Glass card */
+.glass {
+  @apply rounded-2xl border border-line/15 bg-surface/60 backdrop-blur-md;
+}
+
+.chip {
+  @apply inline-flex items-center gap-1.5 rounded-full border border-line/20 px-2.5 py-0.5 font-mono text-[0.7rem] tracking-wide;
+}
+
+::selection {
+  background: rgb(var(--accent) / 0.3);
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--accent));
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-blink {
+    animation: none;
+  }
+}
